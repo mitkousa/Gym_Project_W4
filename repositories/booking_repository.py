@@ -4,7 +4,7 @@ import repositories.lesson_repository as lesson_repository
 import repositories.member_repository as member_repository
 
 def save(booking):
-    sql = "INSERT INTO bookings ( member_id, lesson_id) VALUES (%s, %s) RETURNING id"
+    sql = "INSERT INTO bookings (member_id, lesson_id) VALUES (%s, %s) RETURNING id"
     values = [booking.member.id, booking.lesson.id]
     results = run_sql( sql, values )
     booking.id = results[0]['id']
@@ -23,6 +23,18 @@ def select_all():
         booking = Booking(member, lesson, row['id'])
         bookings.append(booking)
     return bookings
+
+def select(id):
+    booking = None
+    sql = "SELECT * FROM bookings WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        member = member_repository.select(result['member_id'])
+        lesson = lesson_repository.select(result['lesson_id'])
+        booking = Booking(member, lesson, result['id'])
+    return booking
 
 def update(booking):
     sql = "UPDATE bookings SET (member_id, lesson_id) = (%s, %s) WHERE id = %s"
