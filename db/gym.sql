@@ -15,7 +15,7 @@ CREATE TABLE lessons (
 );
 
 CREATE TABLE bookings (
-    id PRIMARY KEY,
-    member_id INT REFERENCES member(id),
-    lesson_id INT REFERENCES lesson(id)
+    id SERIAL PRIMARY KEY,
+    member_id INT REFERENCES members(id),
+    lesson_id INT REFERENCES lessons(id)
 );
