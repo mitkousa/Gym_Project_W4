@@ -1,17 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
 <h2>Update Member</h2>
 
 <form action="/members/{{ member.id }}" method="POST">
     <div>
-        <label for="member">Member:</label>
-        <select name="member_id" id="member_id">
-            {% for member in members %}
-            <option value="{{ member.id }}" {% if member.id == member.member_id.id %} selected {% endif %}>
-                {{ member.name }}
-            </option>
-            {% endfor %}
-        </select>
-    </div>
-    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ member.name }}">
         <input type="submit">
     </div>
 </form>
+
+{% endblock %}
