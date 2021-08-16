@@ -31,3 +31,8 @@ def show(id):
 def edit_member(id):
     member = member_repository.select(id)
     return render_template('members/edit.html', member=member)
+
+@members_blueprint.route("/members/<id>/delete", methods=["POST"])
+def delete_member(id):
+    member_repository.delete(id)
+    return redirect("/members")
