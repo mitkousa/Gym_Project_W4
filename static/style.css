@@ -8,7 +8,7 @@ body {
 }
 
 .home {
-    color: aqua;
+    color: rgb(255, 67, 67);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
