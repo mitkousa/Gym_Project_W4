@@ -1,0 +1,8 @@
+body {
+    background: url('/static/images/Gym.jpeg');
+    background-size: cover;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: azure;
+    background-color: #4ac0c2;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
