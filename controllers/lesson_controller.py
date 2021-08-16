@@ -34,3 +34,8 @@ def edit_lesson(id):
     lesson = lesson_repository.select(id)
     return render_template('lessons/edit.html', lesson=lesson)
 
+@lessons_blueprint.route("/lessons/<id>/delete", methods=["POST"])
+def delete_lesson(id):
+    lesson_repository.delete(id)
+    return redirect("/lessons")
+
