@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> {{member.name}} </h1>
+
+<h2>Lesson Booked:</h2>
+<ul>
+    {% for lesson in lessons %}
+    <li>{{lesson.name}} at {{lesson.start_time}}, Duration: {{lesson.duration}}min</li>
+    {% endfor %} </ul>
+
+    {% endblock %}

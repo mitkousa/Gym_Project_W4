@@ -4,5 +4,28 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: azure;
     background-color: #4ac0c2;
+    text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.home {
+    color: aqua;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+a {
+    color: azure;
+  }
+.member {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px azure;
+    padding: 10px;
+  }
+.members_table {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px azure;
+    padding: 10px;
 }
