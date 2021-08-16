@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<ul class="booking">
+<h1>BOOKINGS</h1>
+
+<table class = "bookings_table">
+ 
+  
+  {% for booking in bookings %}
+  <tr>
+    <td><a href="/bookings/{{ booking.id }}">Member: {{booking.member.name}} -- "{{booking.lesson.name}}" , Duration: {{booking.lesson.duration}}, Starting at: {{booking.lesson.start_time}}</a>
+        <hr>
+        <form action="/bookings/{{ booking.id }}/edit" method="GET">
+            <input type="submit" value="Edit">
+       
+        <form action="/bookings/{{ booking.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form></td>
+  </tr>
+  {% endfor %}
+</table>
+</ul>
+
+
+{% endblock %}
