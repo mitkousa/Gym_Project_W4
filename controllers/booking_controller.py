@@ -12,17 +12,17 @@ def bookings():
     bookings = booking_repository.select_all()
     return render_template("bookings/index.html", bookings = bookings)
 
+@bookings_blueprint.route("/bookings/new")
+def new_booking():
+    members = member_repository.select_all()
+    lessons = lesson_repository.select_all()
+    return render_template("bookings/new.html", members = members, lessons = lessons)
+
 @bookings_blueprint.route("/bookings/<id>")
 def show(id):
     booking = booking_repository.select(id)
     members = booking_repository.members(booking)
     return render_template("bookings/show.html", bookings = bookings, members = members)
-
-@bookings_blueprint.route("/bookings/new", methods=['GET'])
-def new_booking():
-    members = member_repository.select_all()
-    lessons = lesson_repository.select_all()
-    return render_template("/bookings/new.html", members = members, lessons = lessons)
 
 @bookings_blueprint.route("/bookings", methods = ['POST'])
 def create_booking():

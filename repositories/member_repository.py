@@ -43,6 +43,15 @@ def lessons(member):
 
     return lessons
 
+def delete_all():
+    sql = "DELETE FROM members"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM members WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 def update(member):
     sql = "UPDATE members SET name = %s WHERE id = %s"
     values = [member.name, member.id]

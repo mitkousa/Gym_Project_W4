@@ -10,6 +10,19 @@ def lessons():
     lessons = lesson_repository.select_all()
     return render_template("lessons/index.html", lessons = lessons)
 
+@lessons_blueprint.route("/lessons/new")
+def new_lesson():
+    return render_template("lessons/new.html")
+
+@lessons_blueprint.route("/lessons", methods=["POST"])
+def create_lesson():
+    name = request.form["name"]
+    duration = request.form["duration"]
+    start_time = request.form["start_time"]
+    lesson = Lesson(name, duration, start_time)
+    lesson_repository.save(lesson)
+    return redirect("/lessons")
+
 @lessons_blueprint.route("/lessons/<id>")
 def show(id):
     lesson = lesson_repository.select(id)
