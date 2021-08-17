@@ -7,6 +7,16 @@ body {
     text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color:azure;
+    font-size: 50px;
+}
+
 div {
     border-radius: 5px;
 }
@@ -64,8 +74,20 @@ a {
     font-size: 22px;
 }
 
+.bookings_table {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: -1px -1px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px rgb(250, 250, 250);
+    padding: 10px; 
+}
+
 .booking {
-    text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -3px -3px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -74,14 +96,6 @@ a {
     border: 3px azure;
     padding: 10px;
     font-size: 21px;
-  }
-#bookings_table {
-    text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin: auto;
-    width: 50%;
-    text-align: center;
-    border: 3px rgb(250, 250, 250);
-    padding: 10px;   
 }
 
 .bookings_buttons {
