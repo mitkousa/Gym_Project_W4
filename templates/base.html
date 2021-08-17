@@ -63,8 +63,15 @@
         {% block content %}
         {% endblock %}
     </div>
-    <footer>
-        <p>&copy; Dimitar Ivanov 2021</p>
-    </footer>
+    
+    <div class="footer">
+        &copy; Copyright by Dimitar Ivanov 2021
+      </div>
+      <script>
+        var footerResize = function() {
+          $('#footer').css('position', $("body").height() + $("#footer").innerHeight() > $(window).height() ? "inherit" : "fixed");
+        };
+        $(window).resize(footerResize).ready(footerResize);
+      </script>
 </body>
 </html>

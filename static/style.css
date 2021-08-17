@@ -17,7 +17,8 @@ div {
 
 .home {
     display: flex;
-    color: rgb(255, 67, 67);
+    font-size: 24px;
+    color: rgb(250, 49, 49);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -64,7 +65,7 @@ a {
     text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
     width: 50%;
-    text-align: center;
+    text-align:center;
     border: 3px azure;
     padding: 10px;
   }
@@ -77,10 +78,13 @@ a {
     padding: 10px;
 }
 
+.bookings_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body > footer > p {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:30px;
+
     text-align: center;
 }

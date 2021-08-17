@@ -40,7 +40,7 @@ def select(id):
 def members(booking):
     members = []
 
-    sql = "SELECT members. * FROM bookings ON booking.member_id = members.id WHERE id = %s"
+    sql = "SELECT members.* FROM bookings INNER JOIN members ON bookings.member_id = members.id WHERE bookings.id = %s"
 
     values = [booking.id]
     results = run_sql(sql, values)
