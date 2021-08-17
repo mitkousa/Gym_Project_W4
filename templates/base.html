@@ -23,10 +23,11 @@
 </head>
 <body>
     <header>
-        <h1>DI Fitness</h1>
+        
         <nav>
             <ul class="home">
                 <li><a href="/">HOME</a></li>
+                <hr>
                 <li>
                     MEMBERS:
                     <ul>
@@ -54,10 +55,16 @@
                 
             </ul>
         </nav>
+        <div class="logo"><h1>DI FITNESS</h1>
+            <h2>TRAIN WITH CONFIDENCE!</h2>
+        </div>
     </header>
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
+    <footer>
+        <p>&copy; Dimitar Ivanov 2021</p>
+    </footer>
 </body>
 </html>

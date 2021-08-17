@@ -18,11 +18,28 @@ def new_booking():
     lessons = lesson_repository.select_all()
     return render_template("bookings/new.html", members = members, lessons = lessons)
 
+@bookings_blueprint.route("/bookings/<id>/edit")
+def edit_booking(id):
+    booking = booking_repository.select(id)
+    members = member_repository.select_all()
+    lessons = lesson_repository.select_all()
+    return render_template('bookings/edit.html', booking=booking, members=members, lessons=lessons)
+
+@bookings_blueprint.route("/bookings/<id>", methods=['POST'])
+def update_booking(id):
+    member_id = request.form["member_id"]
+    lesson_id = request.form["lesson_id"]
+    member = member_repository.select(member_id)
+    lesson = lesson_repository.select(lesson_id)
+    booking = Booking(member, lesson, id)
+    booking_repository.update(booking)
+    return redirect("/bookings")
+
 @bookings_blueprint.route("/bookings/<id>")
 def show(id):
     booking = booking_repository.select(id)
     members = booking_repository.members(booking)
-    return render_template("bookings/show.html", bookings = bookings, members = members)
+    return render_template("bookings/show.html", booking = booking, members = members)
 
 @bookings_blueprint.route("/bookings", methods = ['POST'])
 def create_booking():
@@ -39,7 +56,3 @@ def delete_booking(id):
     booking_repository.delete(id)
     return redirect("/bookings")
 
-@bookings_blueprint.route("/bookings/<id>/edit")
-def edit_booking(id):
-    booking = booking_repository.select(id)
-    return render_template('bookings/edit.html', booking=booking)

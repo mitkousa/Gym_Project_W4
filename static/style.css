@@ -1,13 +1,22 @@
 body {
     background: url('/static/images/Gym.jpeg');
-    background-size: cover;
+    background-size:cover;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: azure;
     background-color: #4ac0c2;
     text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+div {
+    border-radius: 5px;
+}
+.logo {
+    font-size: 50px;
+    text-align: center;
+}
+
 .home {
+    display: flex;
     color: rgb(255, 67, 67);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -49,4 +58,29 @@ a {
     text-align: center;
     border: 3px rgb(250, 250, 250);
     padding: 10px;
+}
+
+.booking {
+    text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px azure;
+    padding: 10px;
+  }
+.bookings_table {
+    color: chartreuse;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px rgb(250, 250, 250);
+    padding: 10px;
+}
+
+body > footer > p {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+    text-align: center;
 }

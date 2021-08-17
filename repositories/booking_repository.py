@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.booking import Booking
+from models.member import Member
 import repositories.lesson_repository as lesson_repository
 import repositories.member_repository as member_repository
 
@@ -35,6 +36,19 @@ def select(id):
         lesson = lesson_repository.select(result['lesson_id'])
         booking = Booking(member, lesson, result['id'])
     return booking
+
+def members(booking):
+    members = []
+
+    sql = "SELECT members. * FROM bookings ON booking.member_id = members.id WHERE id = %s"
+
+    values = [booking.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        member = Member(row['name'], row['id'])
+        members.append(member)
+    return members
 
 def delete_all():
     sql = "DELETE FROM bookings"

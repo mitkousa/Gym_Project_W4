@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> "{{booking.lesson.name}}" </h1>
+
+<h3>Booked by:</h3>
+
+
+    {% for member in members %}
+        <ul>
+        <li>{{member.name}}</li></ul>
+    {% endfor %}
+
+{% endblock %}
