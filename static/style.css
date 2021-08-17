@@ -11,10 +11,11 @@ a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
-
+    text-align: center;
     text-decoration: none;
     color:azure;
     font-size: 50px;
+    padding-right: 40px;
 }
 
 div {
