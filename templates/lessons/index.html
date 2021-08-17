@@ -9,13 +9,16 @@
   {% for lesson in lessons %}
   <tr>
     <td><a href="/lessons/{{ lesson.id }}"> "{{lesson.name}}" , Duration: {{lesson.duration}}, Starting at: {{lesson.start_time}}</a>
-        <hr>
+      <hr>
+      <ul class="bookings_buttons">
         <form action="/lessons/{{ lesson.id }}/edit" method="GET">
             <input type="submit" value="Edit">
        
         <form action="/lessons/{{ lesson.id }}/delete" method="POST">
             <input type="submit" value="Delete">
-        </form></td>
+        </form>
+      </ul>
+      </td>
   </tr>
   {% endfor %}
 </table>

@@ -40,6 +40,7 @@ a {
     text-align: center;
     border: 3px azure;
     padding: 10px;
+    font-size: 25px;
 }
 
 .lesson {
@@ -59,15 +60,19 @@ a {
     text-align: center;
     border: 3px rgb(250, 250, 250);
     padding: 10px;
+    font-size: 22px;
 }
 
 .booking {
+    display: flex;
+    flex-direction: column;
     text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
     width: 50%;
     text-align:center;
     border: 3px azure;
     padding: 10px;
+    font-size: 20px;
   }
 .bookings_table {
     color: chartreuse;
@@ -76,6 +81,7 @@ a {
     text-align: center;
     border: 3px rgb(250, 250, 250);
     padding: 10px;
+    
 }
 
 .bookings_buttons {
@@ -84,7 +90,7 @@ a {
     justify-content: center;
 }
 
-body > footer > p {
+.footer {
 
     text-align: center;
 }
