@@ -11,15 +11,16 @@ div {
     border-radius: 5px;
 }
 .logo {
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
+    text-shadow: -4px -4px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .home {
     display: flex;
     font-size: 23px;
     color: rgb(250, 49, 49);
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 a {
