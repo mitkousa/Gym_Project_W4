@@ -29,6 +29,7 @@ div {
 
 .home {
     display: flex;
+    
     font-size: 23px;
     color: rgb(250, 49, 49);
     text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
