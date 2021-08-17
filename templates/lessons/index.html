@@ -8,7 +8,7 @@
   
   {% for lesson in lessons %}
   <tr>
-    <td><a href="/lessons/{{ lesson.id }}"> "{{lesson.name}}" , Duration: {{lesson.duration}}, Starting at: {{lesson.start_time}}</a>
+    <td><a href="/lessons/{{ lesson.id }}"> "{{lesson.name}}" , Duration: {{lesson.duration}}, Starting at: {{lesson.start_time}}, Max Capacity: {{lesson.capacity}}</a>
       <ul class="lessons_buttons">
         <form action="/lessons/{{ lesson.id }}/edit" method="GET">
             <input type="submit" value="Edit">

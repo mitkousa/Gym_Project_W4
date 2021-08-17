@@ -19,7 +19,8 @@ def create_lesson():
     name = request.form["name"]
     duration = request.form["duration"]
     start_time = request.form["start_time"]
-    lesson = Lesson(name, duration, start_time)
+    capacity = request.form["capacity"]
+    lesson = Lesson(name, duration, start_time, capacity)
     lesson_repository.save(lesson)
     return redirect("/lessons")
 
@@ -39,7 +40,8 @@ def update_lesson(id):
     name = request.form["name"]
     duration = request.form["duration"]
     start_time = request.form["start_time"]
-    lesson = Lesson(name, duration, start_time, id)
+    capacity = request.form["capacity"]
+    lesson = Lesson(name, duration, start_time, capacity, id)
     lesson_repository.update(lesson)
     return redirect("/lessons")
 

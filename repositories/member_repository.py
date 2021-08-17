@@ -38,7 +38,7 @@ def lessons(member):
     results = run_sql(sql, values)
 
     for row in results:
-        lesson = Lesson(row["name"], row["duration"], row["start_time"], row["id"])
+        lesson = Lesson(row["name"], row["duration"], row["start_time"], row["capacity"] , row["id"])
         lessons.append(lesson)
 
     return lessons

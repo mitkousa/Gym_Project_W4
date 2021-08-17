@@ -23,16 +23,16 @@ member_repository.save(member3)
 member4 = Member("Eva Mendes")
 member_repository.save(member4)
 
-lesson1 = Lesson("Yoga", 45, "18:00")
+lesson1 = Lesson("Yoga", 45, "18:00", 4)
 lesson_repository.save(lesson1)
 
-lesson2 = Lesson("Bootcamp", 30, "12:00")
+lesson2 = Lesson("Bootcamp", 30, "12:00", 6)
 lesson_repository.save(lesson2)
 
-lesson3 = Lesson("Burn it", 25, "17:00")
+lesson3 = Lesson("Burn it", 25, "17:00", 3)
 lesson_repository.save(lesson3)
 
-lesson4 = Lesson("Zumba", 40, "16:00")
+lesson4 = Lesson("Zumba", 40, "16:00", 2)
 lesson_repository.save(lesson4)
 
 booking1 = Booking(member1, lesson2)

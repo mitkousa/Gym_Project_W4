@@ -8,7 +8,7 @@
   
   {% for booking in bookings %}
 
-    <ul><a href="/bookings/{{ booking.id }}">Member: {{booking.member.name}} -- "{{booking.lesson.name}}" , Duration: {{booking.lesson.duration}}, Starting at: {{booking.lesson.start_time}}</a>
+    <ul><a href="/bookings/{{ booking.id }}">Member: {{booking.member.name}} -- "{{booking.lesson.name}}" , Duration: {{booking.lesson.duration}}, Starting at: {{booking.lesson.start_time}}, Max Capacity: {{booking.lesson.capacity}}</a>
         <ul class="bookings_buttons">
         <form action="/bookings/{{ booking.id }}/edit" method="GET">
             <input type="submit" value="Edit">
