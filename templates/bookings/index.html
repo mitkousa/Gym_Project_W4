@@ -3,13 +3,12 @@
 <ul class="booking">
 <h1>BOOKINGS</h1>
 
-<table class = "bookings_table">
+<table id="bookings_table">
  
   
   {% for booking in bookings %}
 
     <ul><a href="/bookings/{{ booking.id }}">Member: {{booking.member.name}} -- "{{booking.lesson.name}}" , Duration: {{booking.lesson.duration}}, Starting at: {{booking.lesson.start_time}}</a>
-        <hr>
         <ul class="bookings_buttons">
         <form action="/bookings/{{ booking.id }}/edit" method="GET">
             <input type="submit" value="Edit">
@@ -18,6 +17,7 @@
             <input type="submit" value="Delete">
         </form>
       </ul>
+      <hr>
     </ul>
  
   {% endfor %}

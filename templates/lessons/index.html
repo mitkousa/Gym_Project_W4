@@ -9,8 +9,7 @@
   {% for lesson in lessons %}
   <tr>
     <td><a href="/lessons/{{ lesson.id }}"> "{{lesson.name}}" , Duration: {{lesson.duration}}, Starting at: {{lesson.start_time}}</a>
-      <hr>
-      <ul class="bookings_buttons">
+      <ul class="lessons_buttons">
         <form action="/lessons/{{ lesson.id }}/edit" method="GET">
             <input type="submit" value="Edit">
        
@@ -18,6 +17,7 @@
             <input type="submit" value="Delete">
         </form>
       </ul>
+      <hr>
       </td>
   </tr>
   {% endfor %}

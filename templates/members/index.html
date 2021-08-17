@@ -8,8 +8,7 @@
   {% for member in members %}
   <tr>
     <td><a href="/members/{{ member.id }}"> {{member.name}} </a>
-      <hr>
-      <ul class="bookings_buttons">
+      <ul class="members_buttons">
         <form action="/members/{{ member.id }}/edit" method="GET">
             <input type="submit" value="Edit"></form>
 
@@ -17,6 +16,7 @@
             <input type="submit" value="Delete">
         </form>
       </ul>
+      <hr>
       </td>
   </tr>
   {% endfor %}

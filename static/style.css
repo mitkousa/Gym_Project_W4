@@ -41,7 +41,7 @@ a {
     text-align: center;
     border: 3px azure;
     padding: 10px;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .lesson {
@@ -65,33 +65,47 @@ a {
 }
 
 .booking {
+    text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     display: flex;
     flex-direction: column;
-    text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
     width: 50%;
     text-align:center;
     border: 3px azure;
     padding: 10px;
-    font-size: 20px;
+    font-size: 21px;
   }
-.bookings_table {
-    color: chartreuse;
+#bookings_table {
+    text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
     width: 50%;
     text-align: center;
     border: 3px rgb(250, 250, 250);
-    padding: 10px;
-    
+    padding: 10px;   
 }
 
 .bookings_buttons {
     display: flex;
-    align-items: center;
+    flex-direction:row;
+    align-self: center;
     justify-content: center;
+    padding-right: 80px;
+}
+
+.members_buttons {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+.lessons_buttons {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-right: 45px;
 }
 
 .footer {
-
     text-align: center;
 }
