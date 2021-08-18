@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="center_show">
 <h1> {{member.name}} </h1>
 
 <h2>Classes Booked:</h2>
@@ -8,5 +9,5 @@
     {% for lesson in lessons %}
     <li>{{lesson.name}} at {{lesson.start_time}}, Duration: {{lesson.duration}}min, Max Capacity: {{lesson.capacity}}</li>
     {% endfor %} </ul>
-
+</div>
     {% endblock %}
