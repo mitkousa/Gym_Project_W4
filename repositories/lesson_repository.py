@@ -12,7 +12,7 @@ def save(lesson):
 def select_all():
     lessons = []
 
-    sql = "SELECT * from lessons"
+    sql = "SELECT * from lessons order by start_time ASC"
     results = run_sql(sql)
 
     for row in results:
