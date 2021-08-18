@@ -7,7 +7,7 @@ body {
     text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-a.home_button {
+.home_button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
