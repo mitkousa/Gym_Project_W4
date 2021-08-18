@@ -165,4 +165,6 @@ select {
 
 .center_show {
     text-align: center;
+    font-size: 22px;
+    text-shadow: -2px -2px 0 rgb(142, 1, 1), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
