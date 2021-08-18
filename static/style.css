@@ -56,7 +56,7 @@ a {
 }
 
 .lesson {
-    text-shadow: -3px -3px 0 rgb(184, 1, 1), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -2px -3px 0 rgb(184, 1, 1), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: rgb(255, 255, 255);
     margin: auto;
     width: 50%;
