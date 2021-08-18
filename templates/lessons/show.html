@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="center_show">
 <h1> "{{lesson.name}}" </h1>
 <h2>Duration: {{lesson.duration}}</h2>
 <h2>Starting at: {{lesson.start_time}}</h2>
@@ -11,5 +12,5 @@
     {% for member in members %}
     <li>{{member.name}}</li>
     {% endfor %} </ul>
-
+</div>
     {% endblock %}
