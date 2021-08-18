@@ -161,4 +161,8 @@ select {
     font-size: 19px;
     border-radius: 6px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
+}
+
+.center_show {
+    text-align: center;
+}
