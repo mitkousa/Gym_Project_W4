@@ -127,9 +127,17 @@ a {
 
 .cap {
     text-align: center;
+    color: crimson;
 }
 
 .new_booking {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+    
+}
+
+.new_lesson {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: -2px -2px 0 rgb(228, 5, 5), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
