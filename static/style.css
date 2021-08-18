@@ -76,12 +76,10 @@ a {
 }
 
 .bookings_table {
-    text-shadow: -1px -1px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -2px -2px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
     width: 80%;
     text-align: center;
-    /* border: 3px rgb(250, 250, 250); */
-    /* padding: 10px;  */
     font-size: 22px;
 }
 
