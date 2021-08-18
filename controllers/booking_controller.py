@@ -48,8 +48,13 @@ def create_booking():
     member = member_repository.select(member_id)
     lesson = lesson_repository.select(lesson_id)
     booking = Booking(member, lesson)
-    booking_repository.save(booking)
-    return redirect("/bookings")
+    current_capacity = len(lesson_repository.members(lesson))
+    print(current_capacity)
+    if current_capacity < lesson.capacity:
+        booking_repository.save(booking)
+        return redirect("/bookings")
+    else:
+        return render_template("/bookings/capacity.html", lesson=lesson, booking=booking)
 
 @bookings_blueprint.route("/bookings/<id>/delete", methods = ['POST'])
 def delete_booking(id):
