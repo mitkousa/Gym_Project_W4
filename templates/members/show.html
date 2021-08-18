@@ -5,6 +5,7 @@
 <h1> {{member.name}} </h1>
 
 <h2>Classes Booked:</h2>
+<hr>
 <ul>
     {% for lesson in lessons %}
     <ul>{{lesson.name}} at {{lesson.start_time}}, Duration: {{lesson.duration}}min, Max Capacity: {{lesson.capacity}}</ul>
