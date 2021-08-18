@@ -158,3 +158,8 @@ a {
     text-align: center;
     font-size: 30px;  
 }
+
+select {
+    font-size: 20px;
+    border-radius: 6px;
+  }
