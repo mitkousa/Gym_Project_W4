@@ -76,15 +76,13 @@ a {
 }
 
 .bookings_table {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Courier New', Courier, monospace;
     text-shadow: -1px -1px 0 rgb(1, 4, 0), 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     margin: auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
-    border: 3px rgb(250, 250, 250);
-    padding: 10px; 
+    /* border: 3px rgb(250, 250, 250); */
+    /* padding: 10px;  */
+    font-size: 22px;
 }
 
 .booking {
@@ -104,7 +102,7 @@ a {
     flex-direction:row;
     align-self: center;
     justify-content: center;
-    padding-right: 80px;
+    padding-right: 40px;
 }
 
 .members_buttons {
@@ -127,7 +125,7 @@ a {
 
 .cap {
     text-align: center;
-    color: crimson;
+    color: rgb(247, 36, 36);
 }
 
 .new_booking {
@@ -142,6 +140,11 @@ a {
 }
 
 .new_member {
+    text-align: center;
+    font-size: 30px;  
+}
+
+.edit_member {
     text-align: center;
     font-size: 30px;  
 }
