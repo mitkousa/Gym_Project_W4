@@ -7,14 +7,14 @@ body {
     text-shadow: -2px -2px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-a.button {
+a.home_button {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     text-align: center;
     text-decoration: none;
     color:azure;
-    font-size: 48px;
+    font-size: 50px;
     padding-right: 40px;
 }
 
